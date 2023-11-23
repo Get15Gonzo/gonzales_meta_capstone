@@ -1,25 +1,26 @@
-     
+import littleLemon from '../images/Logo.svg'
+
 const Nav = () => {
     return (
         <nav>
-            <img className="nav--image" src="littleLemon.svg" alt="Little Lemon Logo" title="Little Lemon Logo" />
+            <img className="nav--image" src={littleLemon} alt="Little Lemon Logo" title="Little Lemon Logo" />
             <ul className="nav--links">
-                <li>
+                <li className="nav--list">
                     <a href="/">Home</a>
                 </li>
-                <li>
+                <li className="nav--list">
                     <a href="/about">About</a>
                 </li>
-                <li>
-                    <a href="/about">Menu</a>
+                <li className="nav--list">
+                    <a href="/menu">Menu</a>
                 </li>
-                <li>
+                <li className="nav--list">
                     <a href="/reservations">Reservations</a>
                 </li>
-                <li>
+                <li className="nav--list">
                     <a href="/order-online">Order Online</a>
                 </li>
-                <li>
+                <li className="nav--list">
                     <a href="/login">Login</a>
                 </li>
             </ul>
