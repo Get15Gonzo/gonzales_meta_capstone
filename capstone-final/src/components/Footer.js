@@ -3,8 +3,10 @@
 const Footer = () => {
     return (
         <footer>
-            <h1>This Weeks Specials!</h1>
-            <button>Online Menu</button>
+            <heading>
+                <p className="footer--title">This Weeks Specials!</p>
+                <button className="btn">Online Menu</button>
+            </heading>
             <cards>
                 <section>
                     <p>Greek Salad</p>
