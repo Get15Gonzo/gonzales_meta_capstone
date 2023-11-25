@@ -49,12 +49,28 @@ footer {
 
 heading {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 
 cards {
   display: flex;
+  justify-content: center;
+}
+
+cardtitle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+cardfooter {
+  display: flex;
+  justify-content: left;
+  align-self: bottom;
+  padding-top: 2rem;
 }
 
 a {
@@ -130,4 +146,31 @@ a {
   font-size: var(--TITLE);
   color: var(--HIGHLIGHT-2);
   font-family: var(--FF1);
+  margin-right: 13rem ;
+  margin-top: 1rem;
+}
+
+.footer--card {
+  background-color: var(--HIGHLIGHT-1);
+  padding: 1rem;
+  margin: 1rem;
+  width: 250px;
+  font-family: var(--FF2);
+  font-size: var(--CARD);
+}
+
+.card--price {
+  color: red;
+}
+
+.card--img {
+  width: 217px;
+  height: 200px;
+  object-fit: cover;
+}
+
+#card--delivery {
+  font-size: var(--CARD);
+  font-family: var(--FF2);
+  font-weight: 600;
 }
