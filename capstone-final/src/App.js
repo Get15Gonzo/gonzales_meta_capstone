@@ -1,14 +1,19 @@
 import './App.css';
+import Home from './components/Home'
+import Form from './components/Form'
 import Nav from './components/Nav'
-import Footer from './components/Footer'
-import Main from './components/Main'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <>
-      <Nav />
-      <Main />
-      <Footer />
+      <BrowserRouter>
+        <Nav/>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="/reservations" element={<Form />} />
+        </Routes>
+      </BrowserRouter>
     </>
 
   );
