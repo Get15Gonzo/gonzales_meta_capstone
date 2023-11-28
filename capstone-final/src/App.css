@@ -69,7 +69,6 @@ cardtitle {
 cardfooter {
   display: flex;
   justify-content: left;
-  align-self: bottom;
   padding-top: 2rem;
 }
 
@@ -169,8 +168,26 @@ a {
   object-fit: cover;
 }
 
+.form--images {
+  display: flex;
+  justify-content: center;
+}
+
+.form--image {
+  height: 150px;
+  width: 200px;
+  margin: 10px;
+  border-radius: var(--BTN-CORNERS);
+  margin-bottom: 3rem;
+}
+
+.form--btn {
+ display: block;
+ margin: auto;
+}
 #card--delivery {
   font-size: var(--CARD);
   font-family: var(--FF2);
   font-weight: 600;
 }
+

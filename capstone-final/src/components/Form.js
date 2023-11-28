@@ -1,12 +1,13 @@
-import Nav from './Nav.js'
-import Footer from './Footer.js'
+import FormFooter from "./FormFooter";
+
 
 const Form = () => {
     return (
         <>
         <form>
-            <p>yes</p>
+            
         </form>
+        <FormFooter />
         </>
     )
 }

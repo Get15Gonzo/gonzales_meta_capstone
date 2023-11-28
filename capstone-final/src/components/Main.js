@@ -1,6 +1,5 @@
 import restaurantFood from '../images/restaurant-food.jpg'
-import { Routes, Link, Route, useNavigate} from 'react-router-dom'
-import Form from './Form.js'
+import { useNavigate } from 'react-router-dom'
 
 const Main = () => {
     const navigate = useNavigate();
@@ -21,4 +20,4 @@ const Main = () => {
     )
 }
 
-export default Main
+export default Main;
