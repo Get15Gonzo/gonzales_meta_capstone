@@ -47,6 +47,10 @@ footer {
   padding-top: 7rem;
 }
 
+Form {
+  background-color: var(--PRIME-GREEN);
+}
+
 heading {
   display: flex;
   justify-content: center;
@@ -174,20 +178,52 @@ a {
 }
 
 .form--image {
-  height: 150px;
-  width: 200px;
+  height:166px;
+  width: 250px;
   margin: 10px;
   border-radius: var(--BTN-CORNERS);
   margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 
 .form--btn {
  display: block;
  margin: auto;
 }
+
+.form--button {
+  font-size: var(--SUBTITLE);
+  text-align: center;
+  width: 350px;
+  height: 75px;
+  border-radius: var(--BTN-CORNERS);
+  font-family: var(--FF1);
+  border: none;
+  margin: 2rem;
+  max-height: fit-content;
+}
+
+.form--title {
+  display: flex;
+}
+
+.form--section-main {
+  display: flex;
+  justify-content: center;
+}
+
+.form--container {
+  margin: auto;
+  background-color: red;
+  width: 875px;
+}
+
 #card--delivery {
   font-size: var(--CARD);
   font-family: var(--FF2);
   font-weight: 600;
 }
 
+.input--error {
+  border-color: red;
+}

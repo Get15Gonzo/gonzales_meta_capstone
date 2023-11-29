@@ -1,6 +1,6 @@
 import './App.css';
 import Home from './components/Home'
-import Form from './components/Form'
+import FormPage from './components/FormPage'
 import Nav from './components/Nav'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -11,7 +11,7 @@ function App() {
         <Nav/>
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/reservations" element={<Form />} />
+          <Route path="/reservations" element={<FormPage />} />
         </Routes>
       </BrowserRouter>
     </>
