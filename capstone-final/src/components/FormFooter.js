@@ -11,11 +11,6 @@ const FormFooter = () => {
                 <img src={restaurantChef} className='form--image' />
                 <img src={restaurantChefs} className='form--image' />
             </section>
-            <section className>
-                <button className=" btn form--btn">
-                    Continue
-                </button>
-            </section>
         </formfooter>
     )
 }

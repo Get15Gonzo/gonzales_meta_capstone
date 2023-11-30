@@ -2,9 +2,15 @@ import FormFooter from "./FormFooter";
 import { Formik, Field, Form } from "formik";
 import * as Yup from 'yup';
 import CustomSelect from "./CustomSelect";
-import dayjs from "dayjs"
+import restaurantImg from '../images/restaurant.jpg'
+import restaurantChef from '../images/restaurant-chef.jpg'
+import restaurantChefs from '../images/restaurant-chefs.jpg'
 
 const reserveSchema = Yup.object().shape({
+    seating: Yup
+        .string()
+        .oneOf(['Outdoor Seating', 'Indoor Seating'])
+        .required("Required"),
     reserveDate: Yup
         .date()
         .required("Required"),
@@ -61,11 +67,27 @@ const FormPage = () => {
 
     return (
         <>
-            <Formik className="Formik" initialValues={{ reserveDate: "", NoOfDiners:"", occasion:""}}>
+            <Formik 
+                className="Formik" 
+                initialValues={{ 
+                    seating:"",
+                    reserveDate: "",
+                    NoOfDiners:"",
+                    occasion:""
+                       }}
+                validationSchema={reserveSchema}
+                >
+                
                 {(props) => (
                     <Form>
                         <div className="form--container">
                             <h1 className="form--title">Reservations</h1>
+                            <div className="form--radio">
+                                    <Field className="form--radio-btn" type="radio" name="seating" value="Outdoor Seating" />
+                                        <option className="form--outdoor-radio" value="Outdoor Seating">Outdoor Seating</option>
+                                    <Field className="form--radio-btn" type="radio" name="seating" value="Indoor Seating" />
+                                        <option value="Indoor Seating">Indoor Seating</option>
+                            </div>
                             <div className="form--section-main">
                                     <Field className="form--button" type="date" name="reserveDate" />
                                     <Field className="form--button" as="select" name="NoOfDiners" placeholder="No. Of Diners">
@@ -96,9 +118,9 @@ const FormPage = () => {
                                     </Field>
                             </div>
                         </div>
-                        <section>
-                            {/* <Field className="form--button" as="select" name="occasion" placeholder="Occasion" /> */}
-                        </section>
+                        <button className="large--btn form--continue-btn">
+                            Continue
+                        </button>
                     </Form>
                 )}
             </Formik>
