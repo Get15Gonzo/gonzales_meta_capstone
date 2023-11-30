@@ -255,12 +255,6 @@ a {
   margin-right: 3rem;
 }
 
-#card--delivery {
-  font-size: var(--CARD);
-  font-family: var(--FF2);
-  font-weight: 600;
-}
-
 .input--error {
   border-color: red;
 }
@@ -269,3 +263,41 @@ input[type="radio"] {
   accent-color: var(--PRIME-GREEN);
   width:20px;
 }
+
+.error--date {
+  position: absolute;
+  left: 25%;
+  color: var(--SECOND-1);
+  font-family: var(--FF2);
+}
+
+.error--occasion {
+  position: absolute;
+  left: 25%;
+  bottom: 42%;
+  color: var(--SECOND-1);
+  font-family: var(--FF2);
+}
+
+.error--time {
+  color: var(--SECOND-1);
+  position: absolute;
+  bottom: 42%;
+  right: 36.5%;
+  font-family: var(--FF2);
+}
+
+.error--diners {
+  color: var(--SECOND-1);
+  position: absolute;
+  right: 29.3%;
+  font-family: var(--FF2);
+}
+
+#card--delivery {
+  font-size: var(--CARD);
+  font-family: var(--FF2);
+  font-weight: 600;
+  font-family: var(--FF2);
+}
+
