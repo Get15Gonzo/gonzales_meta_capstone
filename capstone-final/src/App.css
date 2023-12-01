@@ -255,13 +255,78 @@ a {
   margin-right: 3rem;
 }
 
-.input--error {
-  border-color: red;
+.form--sub-heading {
+  font-family: var(--FF2);
+  color: var(--HIGHLIGHT-1);
+  font-size: var(--CARD);
 }
 
-input[type="radio"] {
-  accent-color: var(--PRIME-GREEN);
-  width:20px;
+.form--message {
+  width: 770px;
+  font-family: var(--FF2);
+  font-size: var(--PARAGRAPH);
+  padding: .5rem .9rem;
+  text-align: left;
+  resize: none;
+}
+
+.form--back-btn {
+  position: absolute;
+  left: 36.5%;
+  bottom: 5%;
+}
+
+.form--submit-btn {
+  position: absolute;
+  bottom: 5%;
+  right: 34.5%;
+}
+
+.form--first {
+  position: absolute;
+  left: 25%;
+}
+
+.form--last {
+  position: absolute;
+  right: 41%;
+}
+
+.form--email {
+  position: absolute;
+  bottom: 48%;
+  left: 25%;
+}
+
+.form--request {
+  position: absolute;
+  left: 25%;
+  bottom: 31.5%;
+}
+
+.form--phone {
+  position: absolute;
+  bottom: 48%;
+  right: 38.5%;
+}
+
+.form--checkbox {
+  width: 30px;
+  margin-left: 40px;
+}
+
+.form--policy {
+  font-family: var(--FF2);
+  font-size: var(--CARD);
+  color: var(--HIGHLIGHT-1);
+}
+
+.form--email-size {
+  font-size: 30px;
+}
+
+.input--error {
+  border-color: red;
 }
 
 .error--date {
@@ -294,10 +359,61 @@ input[type="radio"] {
   font-family: var(--FF2);
 }
 
+.error--first {
+  color: var(--SECOND-1);
+  font-size: var(--CARD);
+  font-family: var(--FF2);
+  position: absolute;
+  left: 25%;
+  font-weight: bold;
+}
+
+.error--last {
+  color: var(--SECOND-1);
+  font-size: var(--CARD);
+  font-family: var(--FF2);
+  position: absolute;
+  right: 34.45%;
+  font-weight: bold;
+}
+
+.error--email {
+  color: var(--SECOND-1);
+  font-size: var(--CARD);
+  font-family: var(--FF2);
+  position: absolute;
+  bottom: 48%;
+  left: 25%;
+  font-weight: bold;
+}
+
+.error--phone {
+  color: var(--SECOND-1);
+  font-size: var(--CARD);
+  font-family: var(--FF2);
+  position: absolute;
+  bottom: 48%;
+  right: 32.8%;
+  font-weight: bold;
+}
+
+.error--privacy {
+  color: var(--SECOND-1);
+  font-size: var(--CARD);
+  font-family: var(--FF2);
+  position: absolute;
+  font-weight: bold;
+}
+
 #card--delivery {
   font-size: var(--CARD);
   font-family: var(--FF2);
   font-weight: 600;
   font-family: var(--FF2);
+}
+
+input[type="radio"] {
+  accent-color: var(--PRIME-GREEN);
+  width:20px;
 }
 

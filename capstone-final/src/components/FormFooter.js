@@ -7,9 +7,9 @@ const FormFooter = () => {
     return (
         <formfooter>
             <section className='form--images'>
-                <img src={restaurantImg} className='form--image' />
-                <img src={restaurantChef} className='form--image' />
-                <img src={restaurantChefs} className='form--image' />
+                <img src={restaurantImg} alt="Little Lemon Patio" className='form--image' loading='lazy' />
+                <img src={restaurantChef} alt="Little Lemon's Head Chef Mario"className='form--image' loading='lazy' />
+                <img src={restaurantChefs} alt="Little Lemon Chefs" className='form--image' loading='lazy' />
             </section>
         </formfooter>
     )

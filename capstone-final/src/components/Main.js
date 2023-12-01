@@ -14,7 +14,7 @@ const Main = () => {
                 </button>
             </section>
             <section className="main--two">
-                    <img className="main--img" src={restaurantFood} alt="food" />
+                    <img className="main--img" src={restaurantFood} alt="food" loading='lazy' />
             </section>
         </main>
     )

@@ -1,26 +1,29 @@
+import FormFooter from './FormFooter';
 import {Formik, Field, Form, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
-import "yup-phone-lite";
+import 'yup-phone-lite';
+
+const phoneRegExp = '{^[\+]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$}'
 
 const stepTwoSchema = Yup.object().shape({
     firstName: Yup
         .string()
-        .required("Please put your First Name"),
+        .required("*First Name is required"),
     lastName: Yup
         .string()
-        .required("Please put your Last Name"),
+        .required("*Last Name is required"),
     phone: Yup
         .string()
-        .phone("Please input a valid Phone Number")
-        .required("Please input a phone"),
+        .phone( phoneRegExp,'Phone Number is invalid'),
     email: Yup
         .string()
-        .email("Please input a valid Email")
-        .required("Please input an Email"),
+        .email("*Email format required")
+        .required("*Email is required"),
     specialMessage: Yup
         .string(),
     privacyAgreement: Yup
         .string()
+        .required("*Please Make Sure to Agree to Our Privacy Policy")
 })
 
 const StepTwo = (props) => {
@@ -29,40 +32,43 @@ const StepTwo = (props) => {
     }
     
     return (
-        <Formik
-            initialValues={props.data}
-            onSubmit={handleSubmit}
-        >
-            {({values}) => (
-                <Form>
-                    <div className="form--container">
-                            <h1 className="form--title">Reservations</h1>
-                            <div className="form--section-main">
-                                    <h5>First Name</h5>
-                                    <Field className="form--button" type="input" name="firstName" />
-                                        <ErrorMessage component="div" className="error--date" name ="firstName" />
-                                    <h5>Last Name</h5>
-                                    <Field className="form--button" type="input" name="lastName" placeholder="last name" />
-                                        <ErrorMessage component="div" className="error--diners" name="lastName" />
-                                    <h5>Email</h5>
-                                    <Field className="form--button" type="email" name="email" placeholder="email" />
-                                        <ErrorMessage component="div" className="error--occasion" name="occasion" />
-                                    <h5>Phone Number</h5>
-                                    <Field className="form--button" type="phone" name="phone" placeholder="Phone" />
-                                        <ErrorMessage component="div" className="error--time" name ="time" />
-                                    <h5>Special Request</h5>
-                                    <Field className="form--button" type="input" name="specialMessage" placeholder="Special Request" />
-                                        <ErrorMessage component="div" className="error--time" name ="specialMessage" />
-                                        <h5>You agree to our Privacy Policy</h5>
-                                    <Field className="form--button" type="checkbox" name="privacyAgreement" />
-                                        <ErrorMessage component="div" className="error--time" name ="privacyAgreement" />
+        <>
+            <Formik
+                initialValues={props.data}
+                validationSchema={stepTwoSchema}
+                onSubmit={handleSubmit}
+            >
+                {({values}) => (
+                    <Form>
+                        <div className="form--container">
+                                <h1 className="form--title">Reservations</h1>
+                                <div className="form--section-main">
+                                        <h5 className="form--sub-heading form--first">*First Name</h5>
+                                        <Field className="form--button" type="text" name="firstName" />
+                                            <ErrorMessage component="div" className="error--first" name ="firstName" />
+                                        <h5 className="form--sub-heading form--last">*Last Name</h5>
+                                        <Field className="form--button" type="text" name="lastName" />
+                                            <ErrorMessage component="div" className="error--last" name="lastName" />
+                                        <h5 className="form--sub-heading form--email" form--email>*Email</h5>
+                                        <Field className="form--button form--email-size" type="email" name="email" />
+                                            <ErrorMessage component="div" className="error--email" name="email" />
+                                        <h5 className="form--sub-heading form--phone">Phone Number</h5>
+                                        <Field className="form--button" type="text" name="phone" />
+                                            <ErrorMessage component="div" className="error--phone" name ="phone" />
+                                        <h5 className="form--sub-heading form--request">Special Request</h5>
+                                        <Field className="form--button form--message" as="textarea" name="specialMessage" />
+                                        <Field className="form--checkbox" type="checkbox" name="privacyAgreement" />
+                                            <ErrorMessage component="div" className="error--privacy" name ="privacyAgreement" />
+                                        <h5 className='form--policy'>*You agree to our Privacy Policy</h5>
+                                </div>
                             </div>
-                        </div>
-                    <button type="button" className="large--btn form--back-btn" onClick={() => props.prev(values)}>Back</button>
-                    <button className="large--btn form--submit-btn" type="submit">Submit</button>
-                </Form>
-            )}
-        </Formik>
+                        <button type="button" className="large--btn form--back-btn" onClick={() => props.prev(values)}>Back</button>
+                        <button className="large--btn form--submit-btn" type="submit">Submit</button>
+                    </Form>
+                )}
+            </Formik>
+            <FormFooter />
+        </>
     )
 }
 
