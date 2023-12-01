@@ -23,7 +23,7 @@ const stepTwoSchema = Yup.object().shape({
         .string(),
     privacyAgreement: Yup
         .string()
-        .required("*Please Make Sure to Agree to Our Privacy Policy")
+        .required("*Please agree to our Privacy Policy")
 })
 
 const StepTwo = (props) => {
@@ -59,7 +59,7 @@ const StepTwo = (props) => {
                                         <Field className="form--button form--message" as="textarea" name="specialMessage" />
                                         <Field className="form--checkbox" type="checkbox" name="privacyAgreement" />
                                             <ErrorMessage component="div" className="error--privacy" name ="privacyAgreement" />
-                                        <h5 className='form--policy'>*You agree to our Privacy Policy</h5>
+                                        <h5 className='form--policy'>*Please agree to our Privacy Policy</h5>
                                 </div>
                             </div>
                         <button type="button" className="large--btn form--back-btn" onClick={() => props.prev(values)}>Back</button>

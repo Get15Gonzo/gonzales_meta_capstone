@@ -1,7 +1,7 @@
 import FormFooter from './FormFooter'
 import {Formik, Field, Form, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
-
+import Modal from './Modal';
 
 const stepOneSchema = Yup.object().shape({
     seating: Yup
@@ -80,7 +80,7 @@ const StepOne = (props) => {
                                             <ErrorMessage component="div" className="error--time" name ="time" />
                                 </div>
                             </div>
-                            <button type="submit" className='large--btn form--continue-btn'>Continue</button>
+                            <button type="submit" className='large--btn form--continue-btn' >Continue</button>
                         </Form>
                     )}
                 </Formik>
