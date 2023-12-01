@@ -9,6 +9,13 @@ function MultiStepForm() {
         NoOfDiners:"",
         occasion:"",
         time:"",
+        firstName:"",
+        lastName:"",
+        phone:"",
+        email:"",
+        specialMessage:"",
+        privacyAgreement:"",
+
     })
     const [currentStep, setCurrentStep] = useState(0);
 

@@ -1,4 +1,27 @@
-import {Formik, Field, Form} from 'formik';
+import {Formik, Field, Form, ErrorMessage} from 'formik';
+import * as Yup from 'yup';
+import "yup-phone-lite";
+
+const stepTwoSchema = Yup.object().shape({
+    firstName: Yup
+        .string()
+        .required("Please put your First Name"),
+    lastName: Yup
+        .string()
+        .required("Please put your Last Name"),
+    phone: Yup
+        .string()
+        .phone("Please input a valid Phone Number")
+        .required("Please input a phone"),
+    email: Yup
+        .string()
+        .email("Please input a valid Email")
+        .required("Please input an Email"),
+    specialMessage: Yup
+        .string(),
+    privacyAgreement: Yup
+        .string()
+})
 
 const StepTwo = (props) => {
     const handleSubmit = (values) => {
@@ -12,23 +35,31 @@ const StepTwo = (props) => {
         >
             {({values}) => (
                 <Form>
-                    <Field className="form--button" as="select" name="occasion" placeholder="Occasion">
-                                        <option value="">Occasion</option>
-                                        <option value="Birthday">Birthday</option>
-                                        <option value="Engagement">Engagement</option>
-                                        <option value="Anniversary">Anniversary</option>
-                    </Field>
-                    <Field name="time" as="select"/>
-                        <option value="">Time</option>
-                        <option value="5:00pm">5:00pm</option>
-                        <option value="6:00pm">6:00pm</option>
-                        <option value="7:00pm">7:00pm</option>
-                        <option value="8:00pm">8:00pm</option>
-                        <option value="9:00pm">9:00pm</option>
-                        <option value="10:00pm">10:00pm</option>
-
-                    <button type="button" onClick={() => props.prev(values)}>Back</button>
-                    <button type="submit">Submit</button>
+                    <div className="form--container">
+                            <h1 className="form--title">Reservations</h1>
+                            <div className="form--section-main">
+                                    <h5>First Name</h5>
+                                    <Field className="form--button" type="input" name="firstName" />
+                                        <ErrorMessage component="div" className="error--date" name ="firstName" />
+                                    <h5>Last Name</h5>
+                                    <Field className="form--button" type="input" name="lastName" placeholder="last name" />
+                                        <ErrorMessage component="div" className="error--diners" name="lastName" />
+                                    <h5>Email</h5>
+                                    <Field className="form--button" type="email" name="email" placeholder="email" />
+                                        <ErrorMessage component="div" className="error--occasion" name="occasion" />
+                                    <h5>Phone Number</h5>
+                                    <Field className="form--button" type="phone" name="phone" placeholder="Phone" />
+                                        <ErrorMessage component="div" className="error--time" name ="time" />
+                                    <h5>Special Request</h5>
+                                    <Field className="form--button" type="input" name="specialMessage" placeholder="Special Request" />
+                                        <ErrorMessage component="div" className="error--time" name ="specialMessage" />
+                                        <h5>You agree to our Privacy Policy</h5>
+                                    <Field className="form--button" type="checkbox" name="privacyAgreement" />
+                                        <ErrorMessage component="div" className="error--time" name ="privacyAgreement" />
+                            </div>
+                        </div>
+                    <button type="button" className="large--btn form--back-btn" onClick={() => props.prev(values)}>Back</button>
+                    <button className="large--btn form--submit-btn" type="submit">Submit</button>
                 </Form>
             )}
         </Formik>
