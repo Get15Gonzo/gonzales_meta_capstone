@@ -1,12 +1,11 @@
 import FormFooter from './FormFooter'
 import {Formik, Field, Form, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
-import Modal from './Modal';
 
 const stepOneSchema = Yup.object().shape({
     seating: Yup
         .string()
-        .oneOf(['* Outdoor Seating', 'Indoor Seating']),
+        .oneOf(['Outdoor Seating', 'Indoor Seating']),
     reserveDate: Yup
         .date()
         .required("* Please Select a Date"),

@@ -1,6 +1,8 @@
 import {useState} from "react";
 import StepOne from "./StepOne";
 import StepTwo from "./StepTwo";
+import { useNavigate } from "react-router-dom";
+import Modal from "./Modal";
 
 function MultiStepForm() {
     const [data, setData] = useState({
@@ -17,10 +19,14 @@ function MultiStepForm() {
         privacyAgreement:"",
 
     })
+
+    const navigate = useNavigate()
+
     const [currentStep, setCurrentStep] = useState(0);
 
     const makeRequest = (formData) => {
         console.log("Form Submitted", formData)
+        navigate('/complete')
     }
 
     const handleNextStep = (newData, final = false) => {

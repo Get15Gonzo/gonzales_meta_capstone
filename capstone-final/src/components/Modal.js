@@ -1,23 +1,17 @@
-import useState from 'react';
+import FormFooter from "./FormFooter";
 
 const Modal = () => {
 
-    const [modal, setModal] = useState(false)
-
-    function toggleModal() {
-        setModal(false)
-    }
-
     return (
         <>
-            {modal && <div className="modal--container">
-                <div>
+            <div className="modal--container">
+                <div className="modal">
                     <h1>
-                        heading
+                        We have received your reservation! We look forward to seeing you soon!
                     </h1>
                 </div>
             </div>
-            }
+            <FormFooter />
         </>
     )
 }
