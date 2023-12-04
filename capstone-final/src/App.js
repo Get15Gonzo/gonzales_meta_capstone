@@ -3,7 +3,7 @@ import Home from './components/Home'
 import Nav from './components/Nav'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MultiStepForm from './components/MultiStepForm';
-import Modal from './components/Modal';
+import Modal from './components/ConfirmedBooking';
 
 function App() {
 

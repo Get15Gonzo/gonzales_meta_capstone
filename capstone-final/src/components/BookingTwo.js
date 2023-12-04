@@ -26,7 +26,7 @@ const stepTwoSchema = Yup.object().shape({
         .required("*Please agree to our Privacy Policy")
 })
 
-const StepTwo = (props) => {
+const BookingTwo = (props) => {
     const handleSubmit = (values) => {
         props.next(values, true)
     }
@@ -39,7 +39,7 @@ const StepTwo = (props) => {
                 onSubmit={handleSubmit}
             >
                 {({values}) => (
-                    <Form>
+                    <Form onSubmit>
                         <div className="form--container">
                                 <h1 className="form--title">Reservations</h1>
                                 <div className="form--section-main">
@@ -72,4 +72,4 @@ const StepTwo = (props) => {
     )
 }
 
-export default StepTwo;
+export default BookingTwo;
