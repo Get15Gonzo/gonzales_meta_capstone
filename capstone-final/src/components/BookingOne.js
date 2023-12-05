@@ -23,7 +23,7 @@ const stepOneSchema = Yup.object().shape({
         .required("* Please Select a Time"),
 })
 
-const StepOne = (props) => {
+const BookingOne = (props) => {
     const handleSubmit = (values) => {
         props.next(values)
     }
@@ -46,7 +46,7 @@ const StepOne = (props) => {
                                             <option value="Indoor Seating">Indoor Seating</option>
                                 </div>
                                 <div className="form--section-main">
-                                        <Field className="form--button" type="date" name="reserveDate" />
+                                        <Field className="form--button" type="date" name="reserveDate" placeholder="reservedate" />
                                             <ErrorMessage component="div" className="error--date" name ="reserveDate" />
                                         <Field className="form--button" as="select" name="NoOfDiners" placeholder="Diners">
                                             <option value="">Diners</option>
@@ -88,4 +88,4 @@ const StepOne = (props) => {
         )
     }
 
-    export default StepOne;
+    export default BookingOne;

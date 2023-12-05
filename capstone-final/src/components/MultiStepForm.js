@@ -1,7 +1,7 @@
 import { useState} from "react";
 import BookingOne from "./BookingOne";
 import BookingTwo from "./BookingTwo";
-import { useNavigate } from "react-router-dom";
+import { useNavigate as navigate } from "react-router-dom";
 
 function MultiStepForm() {
     const [data, setData] = useState({
@@ -19,18 +19,11 @@ function MultiStepForm() {
 
     })
 
-    const navigate = useNavigate()
-
-    const submitAPI = function(formData){
-        return true;
-    }
-
     const [currentStep, setCurrentStep] = useState(0);
 
     const makeRequest = (formData) => {
-        if(submitAPI(formData)){
+            console.log("Form Submitted", formData)
             navigate('/complete')
-        }
     }
 
     const handleNextStep = (newData, final = false) => {

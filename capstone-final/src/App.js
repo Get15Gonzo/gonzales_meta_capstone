@@ -1,22 +1,22 @@
 import './App.css';
 import Home from './components/Home'
 import Nav from './components/Nav'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
 import MultiStepForm from './components/MultiStepForm';
-import Modal from './components/ConfirmedBooking';
+import ConfirmedBooking from './components/ConfirmedBooking';
 
 function App() {
 
+  const navigate = useNavigate()
+
   return (
     <>
-      <BrowserRouter>
         <Nav/>
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/reservations" element={<MultiStepForm />} />
-          <Route path="/complete" element={ <Modal />} />
+          <Route path="/reservations" element={<MultiStepForm navigate={navigate} />} />
+          <Route path="/complete" element={ <ConfirmedBooking />} />
         </Routes>
-      </BrowserRouter>
     </>
 
   );
