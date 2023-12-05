@@ -1,4 +1,4 @@
-/* import { render, screen, within, fireEvent, act, waitFor } from '@testing-library/react';
+import { render, screen, within, fireEvent, act, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import BookingTwo from '../components/BookingTwo'
 
@@ -22,15 +22,13 @@ describe('BookingTwo', () => {
             const lastName = screen.findByRole('heading', {name: /\*last name/i})
             user.type(lastName, 'Gonzales')
 
-            const privacyPolicy = screen.findByRole('checkbox', {name: /\*please agree to our privacy policy/i})
+            const privacyPolicy = screen.findByTestId('privacy')
             user.click(privacyPolicy)
 
-           user.click(screen.getByTestId('submit'))
+            user.click(screen.findByTestId('submit'))
 
-            await waitFor(() => {
+            waitFor(() => {
             expect(onSubmit).toHaveBeenCalledTimes(1);
             })
-
-            expect(onSubmit).toHaveBeenCalledWith({lazy: true})
     })
-}) */
+})

@@ -39,7 +39,7 @@ const BookingTwo = (props) => {
                 onSubmit={handleSubmit}
             >
                 {({values}) => (
-                    <Form onSubmit>
+                    <Form>
                         <div className="form--container">
                                 <h1 className="form--title" data-testid='form-two' id="form-two">Reservations</h1>
                                 <div className="form--section-main">
@@ -57,7 +57,7 @@ const BookingTwo = (props) => {
                                             <ErrorMessage component="div" className="error--phone" name ="phone" />
                                         <h5 className="form--sub-heading form--request">Special Request</h5>
                                         <Field className="form--button form--message" as="textarea" name="specialMessage" />
-                                        <Field className="form--checkbox" type="checkbox" name="privacyAgreement" />
+                                        <Field className="form--checkbox" type="checkbox" data-testid="privacy" name="privacyAgreement" />
                                             <ErrorMessage component="div" className="error--privacy" name ="privacyAgreement" />
                                         <h5 className='form--policy'>*Please agree to our Privacy Policy</h5>
                                 </div>

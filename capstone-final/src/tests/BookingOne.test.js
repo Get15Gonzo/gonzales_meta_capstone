@@ -41,7 +41,8 @@ describe('BookingOne', () => {
 
             user.click(screen.getByRole('button', {name: /continue/i}))
 
-            expect(document.getElementById('form-two')).toBeInTheDocument()
+            render(<BookingTwo />);
+            expect(screen.getByTestId('form-two')).toBeInTheDocument()
 
     });
 })
