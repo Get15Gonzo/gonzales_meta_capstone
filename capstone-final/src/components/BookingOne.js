@@ -48,7 +48,7 @@ const BookingOne = (props) => {
                                 <div className="form--section-main">
                                         <Field className="form--button" type="date" name="reserveDate" placeholder="reservedate" />
                                             <ErrorMessage component="div" className="error--date" name ="reserveDate" />
-                                        <Field className="form--button" as="select" name="NoOfDiners" placeholder="Diners">
+                                        <Field className="form--button" as="select" name="NoOfDiners" placeholder="NumberOfDiners">
                                             <option value="">Diners</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>

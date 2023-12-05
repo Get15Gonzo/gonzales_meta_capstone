@@ -41,7 +41,7 @@ const BookingTwo = (props) => {
                 {({values}) => (
                     <Form onSubmit>
                         <div className="form--container">
-                                <h1 className="form--title">Reservations</h1>
+                                <h1 className="form--title" data-testid='form-two' id="form-two">Reservations</h1>
                                 <div className="form--section-main">
                                         <h5 className="form--sub-heading form--first">*First Name</h5>
                                         <Field className="form--button" type="text" name="firstName" />
@@ -49,7 +49,7 @@ const BookingTwo = (props) => {
                                         <h5 className="form--sub-heading form--last">*Last Name</h5>
                                         <Field className="form--button" type="text" name="lastName" />
                                             <ErrorMessage component="div" className="error--last" name="lastName" />
-                                        <h5 className="form--sub-heading form--email" form--email>*Email</h5>
+                                        <h5 className="form--sub-heading form--email">*Email</h5>
                                         <Field className="form--button form--email-size" type="email" name="email" />
                                             <ErrorMessage component="div" className="error--email" name="email" />
                                         <h5 className="form--sub-heading form--phone">Phone Number</h5>
@@ -63,7 +63,7 @@ const BookingTwo = (props) => {
                                 </div>
                             </div>
                         <button type="button" className="large--btn form--back-btn" onClick={() => props.prev(values)}>Back</button>
-                        <button className="large--btn form--submit-btn" type="submit">Submit</button>
+                        <button className="large--btn form--submit-btn" data-testid="submit" type="submit">Submit</button>
                     </Form>
                 )}
             </Formik>

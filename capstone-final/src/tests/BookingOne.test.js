@@ -1,6 +1,8 @@
-import { render, screen, within, waitFor, fireEvent, getByPlaceholderText } from '@testing-library/react';
-import user from '@testing-library/user-event';
+import { render, screen, within, fireEvent, act } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import '@testing-library/jest-dom'
 import BookingOne from '../components/BookingOne';
+import BookingTwo from '../components/BookingTwo';
 
 /* describe('MultiStepForm', () => {
     const onSubmit = jest.fn();
@@ -12,31 +14,36 @@ import BookingOne from '../components/BookingOne';
 
 describe('BookingOne', () => {
 
-    it('renders form properly', () => {
         const onSubmit = jest.fn()
 
-        onSubmit.mockClear();
-        render(<BookingOne onSubmit={onSubmit} />);
-    })
-
-    it('onSubmit is called when all fields pass validation', async () => {
-        render(<BookingOne />);
-
-        fireEvent.click(screen.getByPlaceholderText(/reservedate/i));
-        fireEvent.mouseDown(screen.getByPlaceholderText(/reservedate/i));
-        fireEvent.change(screen.getByPlaceholderText(/reservedate/i), {
-            target: {value: '2023-12-08'}
+        beforeEach(() => {
+            onSubmit.mockClear();
+            render(<BookingOne onSubmit={onSubmit} />);
         })
-        
-        const dropdownDiner = screen.getByPlaceholderText('Diners');
-        user.selectOptions(dropdownDiner, within(dropdownDiner).getByRole('option', {name: '4'}))
 
-        const dropdownOccasion = screen.getByPlaceholderText('Occasion')
-        user.selectOptions(dropdownOccasion, within(dropdownOccasion).getByRole('option', {name:'Birthday'}))
+    it('calls the continue button when all fields pass validation', async () => {
+        const user = userEvent.setup()
 
-        const dropdownTime = screen.getByPlaceholderText('Time')
-        user.selectOptions(dropdownTime, within(dropdownTime).getByRole('option', {name:'7:00pm'}))
-    })
+            fireEvent.click(screen.getByPlaceholderText(/reservedate/i));
+            fireEvent.mouseDown(screen.getByPlaceholderText(/reservedate/i));
+            act(() => {fireEvent.change(screen.getByPlaceholderText(/reservedate/i)), {
+                target: {value:'2023-12-08'}
+            }})
+
+            const dropdownDiner = screen.getByPlaceholderText('NumberOfDiners');
+            user.selectOptions(dropdownDiner, within(dropdownDiner).getByRole('option', {name: '4'}))
+
+            const dropdownOccasion = screen.getByPlaceholderText('Occasion')
+            user.selectOptions(dropdownOccasion, within(dropdownOccasion).getByRole('option', {name:'Birthday'}));
+
+            const dropdownTime = screen.getByPlaceholderText('Time')
+            user.selectOptions(dropdownTime, within(dropdownTime).getByRole('option', {name:'7:00pm'}));
+
+            user.click(screen.getByRole('button', {name: /continue/i}))
+
+            expect(document.getElementById('form-two')).toBeInTheDocument()
+
+    });
 })
 /*
     test('onSubmit is called when all fields pass validation', async () => {
