@@ -47,7 +47,7 @@ const BookingOne = (props) => {
                                 </div>
                                 <div className="form--section-main">
                                         <Field className="form--button" type="date" name="reserveDate" placeholder="reservedate" />
-                                            <ErrorMessage component="div" className="error--date" name ="reserveDate" />
+                                            <ErrorMessage component="div" className="error--date" name="reserveDate" aria-errormessage="error-date" aria-invalid="true" />
                                         <Field className="form--button" as="select" name="NoOfDiners" placeholder="NumberOfDiners">
                                             <option value="">Diners</option>
                                             <option value="1">1</option>
@@ -59,14 +59,14 @@ const BookingOne = (props) => {
                                             <option value="7">7</option>
                                             <option value="8">8</option>
                                         </Field>
-                                            <ErrorMessage component="div" className="error--diners" name="NoOfDiners" />
+                                            <ErrorMessage component="div" className="error--diners" name="NoOfDiners" aria-errormessage="error-diners" aria-invalid="true" />
                                         <Field className="form--button" as="select" name="occasion" placeholder="Occasion">
                                             <option value="">Occasion</option>
                                             <option value="Birthday">Birthday</option>
                                             <option value="Engagement">Engagement</option>
                                             <option value="Anniversary">Anniversary</option>
                                         </Field>
-                                            <ErrorMessage component="div" className="error--occasion" name="occasion" />
+                                            <ErrorMessage component="div" className="error--occasion" name="occasion" aria-errormessage="error-occasion" aria-invalid="true" />
                                         <Field className="form--button" as="select" name="time" placeholder="Time">
                                             <option value="">Time</option>
                                             <option value="5:00pm">5:00pm</option>
@@ -76,7 +76,7 @@ const BookingOne = (props) => {
                                             <option value="9:00pm">9:00pm</option>
                                             <option value="10:00pm">10:00pm</option>
                                         </Field>
-                                            <ErrorMessage component="div" className="error--time" name ="time" />
+                                            <ErrorMessage component="div" className="error--time" name ="time" aria-errormessage="error-time" aria-invalid="true" />
                                 </div>
                             </div>
                             <button type="submit" className='large--btn form--continue-btn' >Continue</button>
