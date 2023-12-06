@@ -43,23 +43,23 @@ const BookingTwo = (props) => {
                         <div className="form--container">
                                 <h1 className="form--title" data-testid='form-two' id="form-two">Reservations</h1>
                                 <div className="form--section-main">
-                                        <h5 className="form--sub-heading form--first">*First Name</h5>
-                                        <Field className="form--button" type="text" name="firstName" />
+                                        <label htmlFor="firstName" className="form--sub-heading form--first">*First Name</label>
+                                        <Field className="form--button" type="text" name="firstName" data-test-id="firstName"  />
                                             <ErrorMessage component="div" className="error--first" name ="firstName" />
-                                        <h5 className="form--sub-heading form--last">*Last Name</h5>
-                                        <Field className="form--button" type="text" name="lastName" />
+                                        <label htmlFor="lastName" className="form--sub-heading form--last">*Last Name</label>
+                                        <Field className="form--button" type="text" name="lastName" data-test-id="lastName" />
                                             <ErrorMessage component="div" className="error--last" name="lastName" />
-                                        <h5 className="form--sub-heading form--email">*Email</h5>
-                                        <Field className="form--button form--email-size" type="email" name="email" />
+                                        <label htmlFor="email" className="form--sub-heading form--email">*Email</label>
+                                        <Field className="form--button form--email-size" type="email" name="email" data-test-id="email" />
                                             <ErrorMessage component="div" className="error--email" name="email" />
-                                        <h5 className="form--sub-heading form--phone">Phone Number</h5>
-                                        <Field className="form--button" type="text" name="phone" />
+                                        <label htmlFor="phone" className="form--sub-heading form--phone">Phone Number</label>
+                                        <Field className="form--button" type="text" name="phone" data-test-id="phone" />
                                             <ErrorMessage component="div" className="error--phone" name ="phone" />
-                                        <h5 className="form--sub-heading form--request">Special Request</h5>
-                                        <Field className="form--button form--message" as="textarea" name="specialMessage" />
-                                        <Field className="form--checkbox" type="checkbox" data-testid="privacy" name="privacyAgreement" />
+                                        <label htmlFor="specialRequest" className="form--sub-heading form--request">Special Request</label>
+                                        <Field className="form--button form--message" as="textarea" name="specialRequest" />
+                                        <Field className="form--checkbox" type="checkbox" data-testid="privacy" name="privacyAgreement" data-test-id="privacyAgreement" />
                                             <ErrorMessage component="div" className="error--privacy" name ="privacyAgreement" />
-                                        <h5 className='form--policy'>*Please agree to our Privacy Policy</h5>
+                                        <label htmlFor='privacyAgreement' className='form--policy'>*Please agree to our Privacy Policy</label>
                                 </div>
                             </div>
                         <button type="button" className="large--btn form--back-btn" onClick={() => props.prev(values)}>Back</button>

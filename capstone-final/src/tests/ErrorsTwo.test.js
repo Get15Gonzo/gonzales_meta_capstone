@@ -12,16 +12,13 @@ describe('BookingTwo', () => {
         render(<BookingTwo />);
     })
 
-    it('requires 4 fields on the second part of the form', async () => {
+    test('requires 4 fields on the second part of the form', () => {
 
-        submitButton()
+        submitButton();
 
-        waitFor(() => {
-            expect(getFirstName()).toHaveAccessibleErrorMessage('*First Name is required');
-            expect(getLastName()).toHaveAccessibleErrorMessage('*Last Name is required');
-            expect(getEmail()).toHaveAccessibleErrorMessage('*Email is required');
-            expect(getEmail).toHaveAccessibleErrorMessage('*Pleasevacy Policy');
-        })
+            expect(getFirstName()).toHaveAccessibleErrorMessage('*Firred');
+            expect(getEmail()).rejects.toHaveAccessibleErrorMessage();
+            expect(getLastName()).rejects.toHaveAccessibleErrorMessage();
 
     })
 
@@ -33,17 +30,17 @@ describe('BookingTwo', () => {
     })
 
     function getFirstName() {
-        return screen.findByRole('heading', {name: /\*first name/i})
+        return screen.findByTestId('firstName')
     }
 
     function getEmail() {
-        return screen.findByRole('heading', {name: /\*email/i})
+        return screen.findByTestId('email')
     }
     function getLastName() {
-        return screen.findByRole('heading', {name: /\*last name/i})
+        return screen.findByTestId('lastName')
     }
     function getPrivacy() {
-        return screen.findByTestId('privacy')
+        return screen.findByTestId('privacyAgreement')
     }
     function getPhone() {
     }

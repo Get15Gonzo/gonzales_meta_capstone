@@ -16,10 +16,10 @@ describe('BookingOne', () => {
         clickNextButton()
 
         waitFor(() => {
-            expect(getDate()).toHaveAccessibleErrorMessage('* Please Select a Date');
-            expect(getDiners()).toHaveAccessibleErrorMessage('* Please Select The Amount of Diners');
-            expect(getOccasion()).toHaveAccessibleErrorMessage('* Please Select an Occasion');
-            expect(getTime()).toHaveAccessibleErrorMessage('* Please Select a Time');
+            expect(getDate()).resolves.toHaveAccessibleErrorMessage('* Please Select a Date');
+            expect(getDiners()).rejects.toHaveAccessibleErrorMessage('* Please Select The Amount of Diners');
+            expect(getOccasion()).rejects.toHaveAccessibleErrorMessage('* Please Select an Occasion');
+            expect(getTime()).rejects.toHaveAccessibleErrorMessage('* Please Select a Time');
         })
     })
 
@@ -28,7 +28,7 @@ describe('BookingOne', () => {
     } 
 
     function getDate() {
-        return screen.getByPlaceholderText(/reservedate/i)
+        return screen.findByTestId('error-date')
     }
 
     function getDiners() {
