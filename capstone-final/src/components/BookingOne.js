@@ -59,7 +59,7 @@ const BookingOne = (props) => {
                                             <option value="7">7</option>
                                             <option value="8">8</option>
                                         </Field>
-                                        <ErrorMessage component="div" className="error--diners" name="NoOfDiners" />
+                                            <ErrorMessage component="div" className="error--diners" name="NoOfDiners" />
                                         <Field className="form--button" as="select" name="occasion" placeholder="Occasion" data-testid="occasion" aria-errormessage="error-occasion" aria-invalid="true">
                                             <option value="">Occasion</option>
                                             <option value="Birthday">Birthday</option>
@@ -87,7 +87,7 @@ const BookingOne = (props) => {
                                 </div>
                             </div>
                             <div className="continue--btn-container">
-                                <button type="submit" className='large--btn' data-testid='continue' onClick={handleSubmit} >Continue</button>
+                                <button type="submit" className='large--btn' data-testid='continue'>Continue</button>
                             </div>
                         </Form>
                     )}

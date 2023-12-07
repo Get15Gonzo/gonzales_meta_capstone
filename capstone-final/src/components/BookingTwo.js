@@ -17,7 +17,7 @@ const stepTwoSchema = Yup.object().shape({
         .phone( phoneRegExp,'Phone Number is invalid'),
     email: Yup
         .string()
-        .email("*Email format required")
+        .email("*Email @ required")
         .required("*Email is required"),
     specialMessage: Yup
         .string(),
@@ -43,16 +43,16 @@ const BookingTwo = (props) => {
                         <div className="form--container">
                                 <h1 className="form--title" data-testid='form-two' id="form-two">Reservations</h1>
                                 <div className="form--section-main">
-                                       {/*  <label htmlFor="firstName" className="form--sub-heading form--first">*First Name</label> */}
+                                        <label htmlFor="firstName" className="form--sub-heading form--first">*First Name</label>
                                         <Field 
-                                            className= {errors.firstName && touched.firstName ? "input--error": "form--button" } 
+                                            className= {errors.firstName && touched.firstName ? "input--error": "form--button"} 
                                             type="text" 
                                             name="firstName" 
                                             data-testid="firstName"
                                             placeholder="First Name"  
                                         />
                                             <ErrorMessage component="div" className="error--first" name ="firstName" />
-                                       {/*  <label htmlFor="lastName" className="form--sub-heading form--last">*Last Name</label> */}
+                                        <label htmlFor="lastName" className="form--sub-heading form--last">*Last Name</label>
                                         <Field 
                                             className= {errors.lastName && touched.lastName ? "input--error": "form--button" }
                                             type="text" 
@@ -61,7 +61,7 @@ const BookingTwo = (props) => {
                                             placeholder="Last Name"  
                                         />
                                             <ErrorMessage component="div" className="error--last" name="lastName" />
-                                       {/*  <label htmlFor="email" className="form--sub-heading form--email">*Email</label> */}
+                                        <label htmlFor="email" className="form--sub-heading form--email">*Email</label>
                                         <Field 
                                             className= {errors.email && touched.email ? "input--error": "form--button" }
                                             type="email" 
@@ -70,7 +70,7 @@ const BookingTwo = (props) => {
                                             placeholder="email" 
                                             />
                                             <ErrorMessage component="div" className="error--email" name="email" />
-                                       {/*  <label htmlFor="phone" className="form--sub-heading form--phone">Phone Number</label> */}
+                                        <label htmlFor="phone" className="form--sub-heading form--phone">Phone Number</label>
                                         <Field 
                                             className="form--button" 
                                             type="text" 
@@ -79,7 +79,7 @@ const BookingTwo = (props) => {
                                             placeholder="Phone Number"
                                             />
                                             <ErrorMessage component="div" className="error--phone" name ="phone" />
-                                       {/*  <label htmlFor="specialRequest" className="form--sub-heading form--request">Special Request</label> */}
+                                        <label htmlFor="specialRequest" className="form--sub-heading form--request">Special Request</label>
                                         <Field 
                                             className="form--button form--message" 
                                             as="textarea" 

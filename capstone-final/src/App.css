@@ -283,30 +283,30 @@ a {
 
 .form--first {
   position: absolute;
-  left: 25%;
+  margin-right: 40rem;
 }
 
 .form--last {
   position: absolute;
-  right: 41%;
+  margin-left: 11rem;
 }
 
 .form--email {
   position: absolute;
-  bottom: 48%;
-  left: 25%;
+  margin-right: 42.8rem;
+  margin-top: 8.75rem;
 }
 
 .form--request {
   position: absolute;
-  left: 25%;
-  bottom: 31.5%;
+  margin-right: 37.8rem;
+  margin-top: 17.3rem;
 }
 
 .form--phone {
   position: absolute;
-  bottom: 48%;
-  right: 38.5%;
+  margin-left: 12.75rem;
+  margin-top: 8.75rem;
 }
 
 .form--checkbox {
@@ -339,15 +339,15 @@ a {
 
 .error--date {
   position: absolute;
-  left: 25%;
+  margin-right: 36rem;
   color: var(--SECOND-1);
   font-family: var(--FF2);
 }
 
 .error--occasion {
   position: absolute;
-  left: 25%;
-  bottom: 42%;
+  margin-right: 33.25rem;
+  margin-top: 8.5rem;
   color: var(--SECOND-1);
   font-family: var(--FF2);
 }
@@ -355,15 +355,15 @@ a {
 .error--time {
   color: var(--SECOND-1);
   position: absolute;
-  bottom: 42%;
-  right: 36.5%;
+  margin-left: 15.2rem;
+  margin-top: 8.5rem;
   font-family: var(--FF2);
 }
 
 .error--diners {
   color: var(--SECOND-1);
   position: absolute;
-  right: 29.3%;
+  margin-left: 22rem;
   font-family: var(--FF2);
 }
 
@@ -372,7 +372,7 @@ a {
   font-size: var(--CARD);
   font-family: var(--FF2);
   position: absolute;
-  left: 25%;
+  margin-right: 34.25rem;
 }
 
 .error--last {
@@ -380,7 +380,7 @@ a {
   font-size: var(--CARD);
   font-family: var(--FF2);
   position: absolute;
-  right: 34.45%;
+  margin-left: 16.75rem;
 }
 
 .error--email {
@@ -388,8 +388,8 @@ a {
   font-size: var(--CARD);
   font-family: var(--FF2);
   position: absolute;
-  bottom: 48%;
-  left: 25%;
+  margin-right: 37rem;
+  margin-top: 8.75rem;
 }
 
 .error--phone {
@@ -397,8 +397,8 @@ a {
   font-size: var(--CARD);
   font-family: var(--FF2);
   position: absolute;
-  bottom: 48%;
-  right: 32.8%;
+  margin-left: 17.75rem;
+  margin-top: 8.75rem;
 }
 
 .error--privacy {
@@ -406,9 +406,8 @@ a {
   font-size: var(--CARD);
   font-family: var(--FF2);
   position: absolute;
-  position: absolute;
-  bottom:14.61%;
-  right: 37.8%;
+  margin-top:26.1rem;
+  margin-left:4.4rem;
 }
 
 .modal--container {
