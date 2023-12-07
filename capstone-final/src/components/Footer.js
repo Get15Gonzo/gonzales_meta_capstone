@@ -2,13 +2,17 @@ import bruschetta from '../images/bruchetta.svg'
 import greekSalad from '../images/greek-salad.jpg'
 import lemonDessert from '../images/lemon-dessert.jpg'
 import bicycle from '../images/bicycle-vector.png'
+import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
+
+const navigate = useNavigate()
+
     return (
         <footer>
             <heading>
                 <p className="footer--title">This Weeks Specials!</p>
-                <button className="btn">Online Menu</button>
+                <button className="btn" onClick={()=>{navigate('/menu')}}>Online Menu</button>
             </heading>
             <cards>
                 <section className="footer--card">

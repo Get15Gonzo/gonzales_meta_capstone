@@ -1,13 +1,11 @@
 import './App.css';
 import Home from './components/Home'
 import Nav from './components/Nav'
-import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useNavigate as navigate } from 'react-router-dom';
 import MultiStepForm from './components/MultiStepForm';
 import ConfirmedBooking from './components/ConfirmedBooking';
 
 function App() {
-
-  const navigate = useNavigate()
 
   return (
     <>

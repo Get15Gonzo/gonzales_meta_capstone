@@ -38,42 +38,48 @@ const BookingTwo = (props) => {
                 validationSchema={stepTwoSchema}
                 onSubmit={handleSubmit}
             >
-                {({values}) => (
+                {({values, errors, touched}) => (
                     <Form>
                         <div className="form--container">
                                 <h1 className="form--title" data-testid='form-two' id="form-two">Reservations</h1>
                                 <div className="form--section-main">
-                                        <label htmlFor="firstName" className="form--sub-heading form--first">*First Name</label>
+                                       {/*  <label htmlFor="firstName" className="form--sub-heading form--first">*First Name</label> */}
                                         <Field 
-                                            className="form--button" 
+                                            className= {errors.firstName && touched.firstName ? "input--error": "form--button" } 
                                             type="text" 
                                             name="firstName" 
-                                            data-testid="firstName"  
+                                            data-testid="firstName"
+                                            placeholder="First Name"  
                                         />
                                             <ErrorMessage component="div" className="error--first" name ="firstName" />
-                                        <label htmlFor="lastName" className="form--sub-heading form--last">*Last Name</label>
+                                       {/*  <label htmlFor="lastName" className="form--sub-heading form--last">*Last Name</label> */}
                                         <Field 
-                                            className="form--button" 
+                                            className= {errors.lastName && touched.lastName ? "input--error": "form--button" }
                                             type="text" 
                                             name="lastName" 
                                             data-testid="lastName" 
+                                            placeholder="Last Name"  
                                         />
                                             <ErrorMessage component="div" className="error--last" name="lastName" />
-                                        <label htmlFor="email" className="form--sub-heading form--email">*Email</label>
+                                       {/*  <label htmlFor="email" className="form--sub-heading form--email">*Email</label> */}
                                         <Field 
-                                            className="form--button form--email-size" 
+                                            className= {errors.email && touched.email ? "input--error": "form--button" }
                                             type="email" 
                                             name="email" 
-                                            data-testid="email" />
+                                            data-testid="email"
+                                            placeholder="email" 
+                                            />
                                             <ErrorMessage component="div" className="error--email" name="email" />
-                                        <label htmlFor="phone" className="form--sub-heading form--phone">Phone Number</label>
+                                       {/*  <label htmlFor="phone" className="form--sub-heading form--phone">Phone Number</label> */}
                                         <Field 
                                             className="form--button" 
                                             type="text" 
                                             name="phone" 
-                                            data-testid="phone" />
+                                            data-testid="phone"
+                                            placeholder="Phone Number"
+                                            />
                                             <ErrorMessage component="div" className="error--phone" name ="phone" />
-                                        <label htmlFor="specialRequest" className="form--sub-heading form--request">Special Request</label>
+                                       {/*  <label htmlFor="specialRequest" className="form--sub-heading form--request">Special Request</label> */}
                                         <Field 
                                             className="form--button form--message" 
                                             as="textarea" 
@@ -90,18 +96,20 @@ const BookingTwo = (props) => {
                                         <label htmlFor='privacyAgreement' className='form--policy'>*Please agree to our Privacy Policy</label>
                                 </div>
                             </div>
+                            <div className="button-btn">
                         <button 
                             type="button" 
-                            className="large--btn form--back-btn" 
+                            className="large--btn" 
                             onClick={() => props.prev(values)}>
                                 Back
                         </button>
                         <button 
-                            className="large--btn form--submit-btn" 
+                            className="large--btn" 
                             data-testid="submit" 
                             type="submit">
                                 Submit
                         </button>
+                        </div>
                     </Form>
                 )}
             </Formik>

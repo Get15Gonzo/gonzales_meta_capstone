@@ -1,7 +1,6 @@
 import FormFooter from './FormFooter'
 import {Formik, Field, Form, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
-import CustomSelect from './CustomSelect';
 
 const stepOneSchema = Yup.object().shape({
     seating: Yup
@@ -67,14 +66,14 @@ const BookingOne = (props) => {
                                             <option value="Engagement">Engagement</option>
                                             <option value="Anniversary">Anniversary</option>
                                         </Field>
-                                            { 'aria-errormessage' && <ErrorMessage 
+                                            <ErrorMessage 
                                                 component="div" 
                                                 className="error--occasion" 
                                                 name="occasion" 
                                                 id="error-occasion" 
                                                 aria-live="assertive" 
                                                 data-testid="error-occasion" 
-                                            /> }
+                                            />
                                         <Field className="form--button" as="select" name="time" placeholder="Time" data-testid="time">
                                             <option value="">Time</option>
                                             <option value="5:00pm">5:00pm</option>
@@ -87,7 +86,9 @@ const BookingOne = (props) => {
                                             <ErrorMessage component="div" className="error--time" name="time" aria-errormessage="error-time" aria-invalid="true" />
                                 </div>
                             </div>
-                            <button type="submit" className='large--btn form--continue-btn' data-testid='continue' onClick={handleSubmit} >Continue</button>
+                            <div className="continue--btn-container">
+                                <button type="submit" className='large--btn' data-testid='continue' onClick={handleSubmit} >Continue</button>
+                            </div>
                         </Form>
                     )}
                 </Formik>

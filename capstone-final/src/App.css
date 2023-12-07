@@ -91,6 +91,7 @@ a {
   color: var(--PRIME-GREEN);
   font-weight: 600;
   border: none;
+  cursor: pointer;
 }
 
 .large--btn {
@@ -197,13 +198,9 @@ a {
   margin-top: 3rem;
 }
 
-.form--continue-btn {
- justify-content: center;
- position: absolute;
- margin: auto;
- left: 43.2%;
- bottom: 18.5%;
- cursor: pointer;
+.continue--btn-container {
+  display: flex;
+  justify-content: center;
 }
 
 .form--button {
@@ -277,18 +274,11 @@ a {
   resize: none;
 }
 
-.form--back-btn {
-  position: absolute;
-  left: 36.5%;
-  bottom: 5%;
-  cursor: pointer;
-}
-
-.form--submit-btn {
-  position: absolute;
-  bottom: 5%;
-  right: 34.5%;
-  cursor: pointer;
+.button-btn {
+  display: flex;
+  justify-content: center;
+  margin-left: 1.4rem;
+  gap: 4.25rem;
 }
 
 .form--first {
@@ -335,7 +325,16 @@ a {
 }
 
 .input--error {
-  border-color: red;
+  font-size: var(--SUBTITLE);
+  text-align: center;
+  width: 350px;
+  height: 75px;
+  border-radius: var(--BTN-CORNERS);
+  font-family: var(--FF1);
+  border: 2pt solid var(--SECOND-1);
+  margin: 2rem;
+  box-shadow: 2px 5px 5px var(--HIGHLIGHT-2);
+  cursor: pointer;
 }
 
 .error--date {
@@ -374,7 +373,6 @@ a {
   font-family: var(--FF2);
   position: absolute;
   left: 25%;
-  font-weight: bold;
 }
 
 .error--last {
@@ -383,7 +381,6 @@ a {
   font-family: var(--FF2);
   position: absolute;
   right: 34.45%;
-  font-weight: bold;
 }
 
 .error--email {
@@ -393,7 +390,6 @@ a {
   position: absolute;
   bottom: 48%;
   left: 25%;
-  font-weight: bold;
 }
 
 .error--phone {
@@ -403,7 +399,6 @@ a {
   position: absolute;
   bottom: 48%;
   right: 32.8%;
-  font-weight: bold;
 }
 
 .error--privacy {
@@ -411,7 +406,6 @@ a {
   font-size: var(--CARD);
   font-family: var(--FF2);
   position: absolute;
-  font-weight: bold;
   position: absolute;
   bottom:14.61%;
   right: 37.8%;
