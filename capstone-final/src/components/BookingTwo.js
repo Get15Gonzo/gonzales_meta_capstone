@@ -44,26 +44,64 @@ const BookingTwo = (props) => {
                                 <h1 className="form--title" data-testid='form-two' id="form-two">Reservations</h1>
                                 <div className="form--section-main">
                                         <label htmlFor="firstName" className="form--sub-heading form--first">*First Name</label>
-                                        <Field className="form--button" type="text" name="firstName" data-test-id="firstName"  />
+                                        <Field 
+                                            className="form--button" 
+                                            type="text" 
+                                            name="firstName" 
+                                            data-testid="firstName"  
+                                        />
                                             <ErrorMessage component="div" className="error--first" name ="firstName" />
                                         <label htmlFor="lastName" className="form--sub-heading form--last">*Last Name</label>
-                                        <Field className="form--button" type="text" name="lastName" data-test-id="lastName" />
+                                        <Field 
+                                            className="form--button" 
+                                            type="text" 
+                                            name="lastName" 
+                                            data-testid="lastName" 
+                                        />
                                             <ErrorMessage component="div" className="error--last" name="lastName" />
                                         <label htmlFor="email" className="form--sub-heading form--email">*Email</label>
-                                        <Field className="form--button form--email-size" type="email" name="email" data-test-id="email" />
+                                        <Field 
+                                            className="form--button form--email-size" 
+                                            type="email" 
+                                            name="email" 
+                                            data-testid="email" />
                                             <ErrorMessage component="div" className="error--email" name="email" />
                                         <label htmlFor="phone" className="form--sub-heading form--phone">Phone Number</label>
-                                        <Field className="form--button" type="text" name="phone" data-test-id="phone" />
+                                        <Field 
+                                            className="form--button" 
+                                            type="text" 
+                                            name="phone" 
+                                            data-testid="phone" />
                                             <ErrorMessage component="div" className="error--phone" name ="phone" />
                                         <label htmlFor="specialRequest" className="form--sub-heading form--request">Special Request</label>
-                                        <Field className="form--button form--message" as="textarea" name="specialRequest" />
-                                        <Field className="form--checkbox" type="checkbox" data-testid="privacy" name="privacyAgreement" data-test-id="privacyAgreement" />
+                                        <Field 
+                                            className="form--button form--message" 
+                                            as="textarea" 
+                                            name="specialRequest"
+                                            data-testid="specialRequest" 
+                                        />
+                                        <Field 
+                                            className="form--checkbox" 
+                                            type="checkbox"
+                                            name="privacyAgreement"
+                                            data-testid="privacyAgreement" 
+                                        />
                                             <ErrorMessage component="div" className="error--privacy" name ="privacyAgreement" />
                                         <label htmlFor='privacyAgreement' className='form--policy'>*Please agree to our Privacy Policy</label>
                                 </div>
                             </div>
-                        <button type="button" className="large--btn form--back-btn" onClick={() => props.prev(values)}>Back</button>
-                        <button className="large--btn form--submit-btn" data-testid="submit" type="submit">Submit</button>
+                        <button 
+                            type="button" 
+                            className="large--btn form--back-btn" 
+                            onClick={() => props.prev(values)}>
+                                Back
+                        </button>
+                        <button 
+                            className="large--btn form--submit-btn" 
+                            data-testid="submit" 
+                            type="submit">
+                                Submit
+                        </button>
                     </Form>
                 )}
             </Formik>

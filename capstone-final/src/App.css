@@ -220,6 +220,11 @@ a {
   
 }
 
+.form--button > option {
+  color: var(--HIGHLIGHT-2);
+  background-color: var(--HIGHLIGHT-1);
+}
+
 .form--title {
   display: flex;
   padding-top: 3rem;

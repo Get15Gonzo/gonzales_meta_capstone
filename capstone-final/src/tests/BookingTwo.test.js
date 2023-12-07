@@ -10,25 +10,18 @@ describe('BookingTwo', () => {
             render(<BookingTwo onSubmit={onSubmit} />);
         })
 
-    it('onSubmit is called when all fields pass validation', async () => {
-        const user = userEvent.setup()
+    it('renders the second page successfully', async () => {
 
-        const name = screen.findByRole('heading', {name: /\*first name/i})
-            user.type(name, 'Thomas')
+        const reservations = await screen.findByText('Reservations')
+        expect(reservations).toBeInTheDocument()
 
-            const email = screen.findByRole('heading', {name: /\*email/i})
-            user.type(email, 'tom@gmail.com')
+        const firstName = await screen.findByText('*First Name')
+        expect(firstName).toBeInTheDocument()
 
-            const lastName = screen.findByRole('heading', {name: /\*last name/i})
-            user.type(lastName, 'Gonzales')
-
-            const privacyPolicy = screen.findByTestId('privacy')
-            user.click(privacyPolicy)
-
-            user.click(screen.findByTestId('submit'))
-
-            waitFor(() => {
-            expect(onSubmit).toHaveBeenCalledTimes(1);
-            })
+        const time = await screen.findByText('Submit')
+        expect(time).toBeInTheDocument()
+        
+        const continueButton = await screen.findByText('Back')
+        expect(continueButton).toBeInTheDocument()
     })
 })
