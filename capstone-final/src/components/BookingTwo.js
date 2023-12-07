@@ -48,35 +48,28 @@ const BookingTwo = (props) => {
                                             className= {errors.firstName && touched.firstName ? "input--error": "form--button"} 
                                             type="text" 
                                             name="firstName" 
-                                            data-testid="firstName"
-                                            placeholder="First Name"  
+                                            data-testid="firstName"  
                                         />
                                             <ErrorMessage component="div" className="error--first" name ="firstName" />
                                         <label htmlFor="lastName" className="form--sub-heading form--last">*Last Name</label>
                                         <Field 
                                             className= {errors.lastName && touched.lastName ? "input--error": "form--button" }
                                             type="text" 
-                                            name="lastName" 
-                                            data-testid="lastName" 
-                                            placeholder="Last Name"  
+                                            name="lastName"    
                                         />
                                             <ErrorMessage component="div" className="error--last" name="lastName" />
                                         <label htmlFor="email" className="form--sub-heading form--email">*Email</label>
                                         <Field 
                                             className= {errors.email && touched.email ? "input--error": "form--button" }
                                             type="email" 
-                                            name="email" 
-                                            data-testid="email"
-                                            placeholder="email" 
+                                            name="email"
                                             />
                                             <ErrorMessage component="div" className="error--email" name="email" />
                                         <label htmlFor="phone" className="form--sub-heading form--phone">Phone Number</label>
                                         <Field 
-                                            className="form--button" 
+                                            className= {errors.phone && touched.phone ? "input--error": "form--button" }
                                             type="text" 
                                             name="phone" 
-                                            data-testid="phone"
-                                            placeholder="Phone Number"
                                             />
                                             <ErrorMessage component="div" className="error--phone" name ="phone" />
                                         <label htmlFor="specialRequest" className="form--sub-heading form--request">Special Request</label>
@@ -84,19 +77,17 @@ const BookingTwo = (props) => {
                                             className="form--button form--message" 
                                             as="textarea" 
                                             name="specialRequest"
-                                            data-testid="specialRequest" 
                                         />
                                         <Field 
                                             className="form--checkbox" 
                                             type="checkbox"
                                             name="privacyAgreement"
-                                            data-testid="privacyAgreement" 
                                         />
                                             <ErrorMessage component="div" className="error--privacy" name ="privacyAgreement" />
                                         <label htmlFor='privacyAgreement' className='form--policy'>*Please agree to our Privacy Policy</label>
                                 </div>
                             </div>
-                            <div className="button-btn">
+                            <div className="bottom--form-btns">
                         <button 
                             type="button" 
                             className="large--btn" 

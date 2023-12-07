@@ -5,7 +5,7 @@ const Main = () => {
     const navigate = useNavigate();
     return (
         <main>
-            <section className="main--one">
+            <section>
                 <h1 className="main--title">Little Lemon</h1>
                 <h3 className="main--subtitle">Chicago</h3>
                 <p className="main--text"> We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist</p>

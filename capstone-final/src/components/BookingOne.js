@@ -35,7 +35,7 @@ const BookingOne = (props) => {
                     validationSchema={stepOneSchema}
                     onSubmit={handleSubmit}
                 >
-                    {(props) => (
+                    {(errors, touched) => (
                         <Form>
                             <div className="form--container">
                                 <h1 className="form--title">Reservations</h1>
@@ -46,9 +46,24 @@ const BookingOne = (props) => {
                                             <option value="Indoor Seating">Indoor Seating</option>
                                 </div>
                                 <div className="form--section-main">
-                                        <Field className="form--button" type="date" name="reserveDate" placeholder="reservedate" data-testid="reserveDate" aria-errormessage="error-date" aria-invalid="true" />
+                                        <Field 
+                                            className= {errors.reserveDate && touched.reserveDate ? "input--error": "form--button"}
+                                            type="date" 
+                                            name="reserveDate" 
+                                            placeholder="reservedate" 
+                                            aria-errormessage="error-date" 
+                                            aria-invalid="true" 
+                                        />
                                             <ErrorMessage component="div" className="error--date" name="reserveDate" data-testid="error-date" />
-                                        <Field label="NoOfDiners" className="form--button" as="select" name="NoOfDiners" placeholder="NumberOfDiners" data-testid="NoOfDiners" aria-errormessage="error-diners" aria-invalid="true">
+                                        <Field 
+                                            label="NoOfDiners" 
+                                            className= {errors.NoOfDiners && touched.NoOfDiners ? "input--error": "form--button"}
+                                            as="select" name="NoOfDiners" 
+                                            placeholder="NumberOfDiners" 
+                                            data-testid="NoOfDiners" 
+                                            aria-errormessage="error-diners" 
+                                            aria-invalid="true"
+                                        >
                                             <option value="">Diners</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
