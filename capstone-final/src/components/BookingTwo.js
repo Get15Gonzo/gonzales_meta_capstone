@@ -48,23 +48,28 @@ const BookingTwo = (props) => {
                                             className= {errors.firstName && touched.firstName ? "input--error": "form--button"} 
                                             type="text" 
                                             name="firstName" 
-                                            data-testid="firstName"  
+                                            aria-errormessage="error-first"
+                                            aria-invalid="true"
                                         />
-                                            <ErrorMessage component="div" className="error--first" name ="firstName" />
+                                            <ErrorMessage component="div" className="error--first" name ="firstName" label="error-first" />
                                         <label htmlFor="lastName" className="form--sub-heading form--last">*Last Name</label>
                                         <Field 
                                             className= {errors.lastName && touched.lastName ? "input--error": "form--button" }
                                             type="text" 
-                                            name="lastName"    
+                                            name="lastName"
+                                            aria-errormessage="error-last"
+                                            aria-invalid="true"    
                                         />
-                                            <ErrorMessage component="div" className="error--last" name="lastName" />
+                                            <ErrorMessage component="div" className="error--last" name="lastName" label="error-last" />
                                         <label htmlFor="email" className="form--sub-heading form--email">*Email</label>
                                         <Field 
                                             className= {errors.email && touched.email ? "input--error": "form--button" }
                                             type="email" 
                                             name="email"
+                                            aria-errormessage="error-email"
+                                            aria-invalid="true"
                                             />
-                                            <ErrorMessage component="div" className="error--email" name="email" />
+                                            <ErrorMessage component="div" className="error--email" name="email" label="error-email" />
                                         <label htmlFor="phone" className="form--sub-heading form--phone">Phone Number</label>
                                         <Field 
                                             className= {errors.phone && touched.phone ? "input--error": "form--button" }
@@ -82,8 +87,10 @@ const BookingTwo = (props) => {
                                             className="form--checkbox" 
                                             type="checkbox"
                                             name="privacyAgreement"
+                                            aria-errormessage="error-privacy"
+                                            aria-invalid="true"
                                         />
-                                            <ErrorMessage component="div" className="error--privacy" name ="privacyAgreement" />
+                                            <ErrorMessage component="div" className="error--privacy" name ="privacyAgreement" label="error-privacy" />
                                         <label htmlFor='privacyAgreement' className='form--policy'>*Please agree to our Privacy Policy</label>
                                 </div>
                             </div>

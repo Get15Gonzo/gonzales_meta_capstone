@@ -54,7 +54,7 @@ const BookingOne = (props) => {
                                             aria-errormessage="error-date" 
                                             aria-invalid="true" 
                                         />
-                                            <ErrorMessage component="div" className="error--date" name="reserveDate" data-testid="error-date" />
+                                            <ErrorMessage component="div" className="error--date" name="reserveDate" label="error-date" />
                                         <Field 
                                             label="NoOfDiners" 
                                             className= {errors.NoOfDiners && touched.NoOfDiners ? "input--error": "form--button"}
@@ -74,22 +74,29 @@ const BookingOne = (props) => {
                                             <option value="7">7</option>
                                             <option value="8">8</option>
                                         </Field>
-                                            <ErrorMessage component="div" className="error--diners" name="NoOfDiners" />
-                                        <Field className="form--button" as="select" name="occasion" placeholder="Occasion" data-testid="occasion" aria-errormessage="error-occasion" aria-invalid="true">
+                                            <ErrorMessage component="div" className="error--diners" name="NoOfDiners" label="error-diners" />
+                                        <Field 
+                                            className="form--button" 
+                                            as="select" name="occasion" 
+                                            placeholder="Occasion" 
+                                            data-testid="occasion" 
+                                            aria-errormessage="error-occasion" 
+                                            aria-invalid="true"
+                                        >
                                             <option value="">Occasion</option>
                                             <option value="Birthday">Birthday</option>
                                             <option value="Engagement">Engagement</option>
                                             <option value="Anniversary">Anniversary</option>
                                         </Field>
-                                            <ErrorMessage 
-                                                component="div" 
-                                                className="error--occasion" 
-                                                name="occasion" 
-                                                id="error-occasion" 
-                                                aria-live="assertive" 
-                                                data-testid="error-occasion" 
-                                            />
-                                        <Field className="form--button" as="select" name="time" placeholder="Time" data-testid="time">
+                                            <ErrorMessage component="div" className="error--occasion" name="occasion" aria-live="assertive" label="error-occasion" />
+                                        <Field 
+                                            className="form--button" 
+                                            as="select"
+                                            name="time" 
+                                            placeholder="Time" 
+                                            aria-errormessage="error-time"
+                                            aria-invalid="true"
+                                        >
                                             <option value="">Time</option>
                                             <option value="5:00pm">5:00pm</option>
                                             <option value="6:00pm">6:00pm</option>
@@ -98,7 +105,7 @@ const BookingOne = (props) => {
                                             <option value="9:00pm">9:00pm</option>
                                             <option value="10:00pm">10:00pm</option>
                                         </Field>
-                                            <ErrorMessage component="div" className="error--time" name="time" aria-errormessage="error-time" aria-invalid="true" />
+                                            <ErrorMessage component="div" className="error--time" name="time" label="error-time" />
                                 </div>
                             </div>
                             <div className="continue--btn-container">

@@ -1,19 +1,19 @@
 import FormFooter from "./FormFooter";
 
-const Modal = () => {
+const ConfirmedBooking = () => {
 
     return (
         <>
-            <div className="modal--container">
+            <section className="modal--container">
                 <div className="modal">
                     <h1>
-                        We have received your reservation! We look forward to seeing you soon!
+                        We have received your reservation! <br />We look forward to seeing you soon!
                     </h1>
                 </div>
-            </div>
+            </section>
             <FormFooter />
         </>
     )
 }
 
-export default Modal;
+export default ConfirmedBooking;
