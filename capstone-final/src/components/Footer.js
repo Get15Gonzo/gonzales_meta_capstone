@@ -12,7 +12,7 @@ const navigate = useNavigate()
         <footer>
             <heading>
                 <p className="footer--title">This Weeks Specials!</p>
-                <button className="btn" onClick={()=>{navigate('/menu')}}>Online Menu</button>
+                <button className="btn footer--btn" onClick={()=>{navigate('/menu')}}>Online Menu</button>
             </heading>
             <cards>
                 <section className="footer--card">

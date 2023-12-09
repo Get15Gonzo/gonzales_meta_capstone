@@ -463,6 +463,47 @@ input[type="radio"] {
 
 /* DEVICE ACCESSBILITY */
 
+@media only screen and (max-width:1024px) {
+
+  .main--img {
+    width: 17rem;
+    max-width: 100%;
+    border-radius: var(--BTN-CORNERS);
+    margin-left: 5rem;
+  }
+
+  .footer--title {
+    font-size: 60px;
+  }
+
+  .form--button {
+    justify-content: center;
+  }
+
+  .form--container {
+    margin: auto;
+    width: 828px;
+  }
+
+  .form--title {
+    margin-left: 3rem;
+  }
+
+  .nav--links {
+    list-style-type: none;
+    margin-left: 4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .nav--list {
+    display: inline;
+    margin: 1rem;
+  }
+
+}
+
 @media only screen and (max-width:500px) {
   :root {
     --PHONE_TITLE:40px;
@@ -470,8 +511,254 @@ input[type="radio"] {
     --PHONE_CARD: 14px;
     --PHONE_PARAGRAPH: 12px;
   }
-}
 
-@media onlyscreen and (max-width:1024px) {
+  nav {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  footer {
+    display: block;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 0;
+  }
+
+  cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  heading {
+    display: block;
+  }
+
+  .nav--links {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    flex-wrap: wrap;
+    height:5rem;
+  }
+  
+  .nav--list {
+    display: inline;
+    margin: 1rem;
+  }
+  
+  .nav--image {
+    display: block;
+    margin: auto;
+    padding: 1rem 0rem;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  /* MAIN */
+
+  main {
+    display: block;
+    justify-content: center;
+  }
+
+  .main--title {
+    font-family: var(--FF1);
+    color: var(--PRIME-YELLOW);
+    font-weight: 500;
+  }
+  
+  .main--subtitle {
+    font-family: var(--FF1);
+    color: var(--HIGHLIGHT-1)
+  }
+  
+  .main--text {
+    color: var(--HIGHLIGHT-1);
+    font-family: var(--FF1);
+    padding-bottom: 3rem;
+    width: auto;
+  }
+  
+  .main--img {
+    display: block;
+    width: 10rem;
+    margin:auto;
+    border-radius: var(--BTN-CORNERS);
+    visibility: hidden;
+  }
+
+  .footer--title {
+    font-size: var(--PHONE_TITLE);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  footer--card {
+    flex-wrap: wrap;
+    
+  }
+
+  .footer--btn {
+    display: block;
+    margin: auto;
+
+  }
+
+  .form--container {
+    width: auto;
+  }
+
+  .form--radio {
+    display: block;
+    flex-wrap: wrap;
+    width: auto;
+    font-size: 2rem;
+    padding: 0;
+    margin-left: 2.5rem;
+  }
+
+  .form--images {
+    flex-wrap: wrap;
+  }
+
+  .error--date {
+    position: absolute;
+    margin-right: 9.5rem;
+    color: var(--SECOND-1);
+    font-family: var(--FF2);
+  }
+  
+  .error--occasion {
+    position: absolute;
+    margin-right: 7rem;
+    margin-top: 17.5rem;
+    color: var(--SECOND-1);
+    font-family: var(--FF2);
+  }
+  
+  .error--time {
+    color: var(--SECOND-1);
+    position: absolute;
+    margin-left: 0rem;
+    margin-right: 9.5rem;
+    margin-top: 8.5rem;
+    font-family: var(--FF2);
+  }
+  
+  .error--diners {
+    color: var(--SECOND-1);
+    position: absolute;
+    margin-left: 0rem;
+    margin-right: 2.5rem;
+    margin-top: 26rem ;
+    font-family: var(--FF2);
+  }
+
+  .error--first {
+    color: var(--SECOND-1);
+    font-size: var(--CARD);
+    font-family: var(--FF2);
+    position: absolute;
+    margin-right: 7.25rem;
+  }
+  
+  .error--last {
+    color: var(--SECOND-1);
+    font-size: var(--CARD);
+    font-family: var(--FF2);
+    position: absolute;
+    margin-left: 0rem;
+    margin-right: 7.25rem;
+    margin-top: 8.7rem;
+  }
+  
+  .error--email {
+    color: var(--SECOND-1);
+    font-size: var(--CARD);
+    font-family: var(--FF2);
+    position: absolute;
+    margin-right: 9.75rem;
+    margin-top: 17.5rem;
+  }
+  
+  .error--phone {
+    color: var(--SECOND-1);
+    font-size: var(--CARD);
+    font-family: var(--FF2);
+    position: absolute;
+    margin-left: 0rem;
+    margin-right: 6.2rem;
+    margin-top: 26rem;
+  }
+  
+  .error--privacy {
+    color: var(--SECOND-1);
+    font-size: var(--CARD);
+    font-family: var(--FF2);
+    position: absolute;
+    margin-top:43.45rem;
+    margin-left:4.4rem;
+  }
+
+  .form--first {
+    position: absolute;
+    margin-right: 13rem;
+  }
+  
+  .form--last {
+    position: absolute;
+    margin-left: 0rem;
+    margin-right: 13rem;
+    margin-top: 8.7rem;
+  }
+  
+  .form--email {
+    position: absolute;
+    margin-right: 15.5rem;
+    margin-top: 17.5rem;
+  }
+  
+  .form--request {
+    position: absolute;
+    margin-right: 10.5rem;
+    margin-top: 34.5rem;
+  }
+  
+  .form--phone {
+    position: absolute;
+    margin-left: 0rem;
+    margin-right: 11.2rem;
+    margin-top: 26rem;
+  }
+
+  .bottom--form-btns {
+    flex-wrap: wrap ;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .modal--container {
+    display: flex;
+    align-items: center;
+    height: 30rem;
+    justify-content: center;
+    background-color: var(--PRIME-GREEN);
+  }
+  
+  .modal {
+    border-radius: 5px;
+    padding: 2rem;
+    background-color: white;
+    margin: 2rem;
+    color: var(--HIGHLIGHT-2);
+    font-family: var(--FF1);
+    border: 5pt solid var(--PRIME-YELLOW);
+    box-shadow: 2px 5px 5px var(--HIGHLIGHT-2);
+    font-size: var(--CARD);
+  }
 
 }
