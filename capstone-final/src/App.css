@@ -1,7 +1,8 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+ 
 }
 
 :root {
@@ -30,18 +31,19 @@
 }
 
 nav {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
   margin: 3rem;
 }
 
 main {
   background-color: var(--PRIME-GREEN);
-  justify-content: center;
   display: flex;
-  padding: 2rem;
   height: 30rem;
+  justify-content: center;
+  padding: 2rem;
+  
 }
 
 footer {
@@ -54,9 +56,10 @@ Form {
 }
 
 heading {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  
 }
 
 cards {
@@ -66,10 +69,11 @@ cards {
 
 cardtitle {
   display: flex;
+  font-weight: bold;
   justify-content: space-between;
   margin-bottom: 2rem;
   margin-top: 2rem;
-  font-weight: bold;
+  
 }
 
 cardfooter {
@@ -79,32 +83,32 @@ cardfooter {
 }
 
 a {
-  text-decoration: none;
-  font-family: 'Karla';
-  color: black;
+   color: black;
+   font-family: 'Karla';
+   text-decoration: none;
 }
 
 /* BUTTONS */
 
 .btn {
-  border-radius: var(--BTN-CORNERS);
-  font-size: var(--CARD);
-  padding: 1rem;
   background-color: var(--PRIME-YELLOW);
-  color: var(--PRIME-GREEN);
-  font-weight: 600;
   border: none;
+  border-radius: var(--BTN-CORNERS);
+  color: var(--PRIME-GREEN);
   cursor: pointer;
+  font-size: var(--CARD);
+  font-weight: 600;
+  padding: 1rem;
 }
 
 .large--btn {
-  border-radius: var(--BTN-CORNERS);
-  font-size: var(--CARD);
-  padding: 1rem 4rem;
   background-color: var(--PRIME-YELLOW);
-  color: var(--PRIME-GREEN);
-  font-weight: 600;
   border: none;
+  border-radius: var(--BTN-CORNERS);
+  color: var(--PRIME-GREEN);
+  font-size: var(--CARD);
+  font-weight: 600;
+  padding: 1rem 4rem;
 }
 
 .continue--btn-container {
@@ -113,17 +117,16 @@ a {
 }
 
 .form--button {
-  font-size: var(--SUBTITLE);
-  text-align: center;
-  width: 350px;
-  height: 75px;
-  border-radius: var(--BTN-CORNERS);
-  font-family: var(--FF1);
   border: none;
-  margin: 2rem;
+  border-radius: var(--BTN-CORNERS);
   box-shadow: 2px 5px 5px var(--HIGHLIGHT-2);
   cursor: pointer;
-  
+  font-family: var(--FF1);
+  font-size: var(--SUBTITLE);
+  height: 75px;
+  margin: 2rem;
+  text-align: center;
+  width: 350px; 
 }
 
 .form--button > option {
@@ -133,17 +136,17 @@ a {
 .bottom--form-btns {
   display: flex;
   justify-content: center;
-  margin-left: 1.4rem;
   gap: 4.25rem;
+  margin-left: 1.4rem;
 }
 
 .form--radio {
-  display: flex;
-  font-size: var(--SUBTITLE);
   color: var(--HIGHLIGHT-1);
+  display: flex;
   font-family: var(--FF1);
-  width: 800px;
+  font-size: var(--SUBTITLE);
   padding-left: 3.5rem;
+  width: 800px;
 }
 
 .form--outdoor-radio {
@@ -536,6 +539,8 @@ input[type="radio"] {
     display: block;
   }
 
+  /* NAV */
+
   .nav--links {
     display: flex;
     justify-content: center;
@@ -556,6 +561,8 @@ input[type="radio"] {
     width: 100%;
     max-width: 200px;
   }
+
+  /* END NAV */
 
   /* MAIN */
 
@@ -578,7 +585,6 @@ input[type="radio"] {
   .main--text {
     color: var(--HIGHLIGHT-1);
     font-family: var(--FF1);
-    padding-bottom: 3rem;
     width: auto;
   }
   
@@ -589,6 +595,10 @@ input[type="radio"] {
     border-radius: var(--BTN-CORNERS);
     visibility: hidden;
   }
+
+  /* END MAIN */
+
+  /* FOOTER */
 
   .footer--title {
     font-size: var(--PHONE_TITLE);
@@ -608,6 +618,10 @@ input[type="radio"] {
 
   }
 
+  /* END FOOTER */
+
+  /* FORM */
+
   .form--container {
     width: auto;
   }
@@ -624,6 +638,10 @@ input[type="radio"] {
   .form--images {
     flex-wrap: wrap;
   }
+
+  /* END FORM */
+
+  /* ERRORS */
 
   .error--date {
     position: absolute;
@@ -704,6 +722,10 @@ input[type="radio"] {
     margin-left:4.4rem;
   }
 
+  /* END ERRORS */
+
+  /* FORM */
+
   .form--first {
     position: absolute;
     margin-right: 13rem;
@@ -735,6 +757,10 @@ input[type="radio"] {
     margin-top: 26rem;
   }
 
+  /* END FORM */
+
+  /* MODAL */
+
   .bottom--form-btns {
     flex-wrap: wrap ;
     justify-content: center;
@@ -761,4 +787,9 @@ input[type="radio"] {
     font-size: var(--CARD);
   }
 
+  /* END MODAL */
+
+  main > button {
+    margin: 0;
+  }
 }
